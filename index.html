@@ -1,0 +1,74 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="verification-card">
+            <!-- Header -->
+            <div class="card-header">
+                <h1>Certificate Verification</h1>
+                <p>Verify your certificate instantly</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="registrationID">Registration ID</label>
+                <input 
+                    type="text" 
+                    id="registrationID" 
+                    placeholder="Enter Registration ID"
+                    class="input-field"
+                >
+                <button class="verify-btn" onclick="verifyCertificate()">Verify</button>
+            </div>
+
+            <!-- Details Section (Hidden by default) -->
+            <div class="details-section" id="detailsSection">
+                <!-- Green Tick Icon -->
+                <div class="success-icon">
+                    <svg class="checkmark" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                    <p class="verified-text">Verified</p>
+                </div>
+
+                <!-- Student Details -->
+                <div class="student-info">
+                    <div class="info-item">
+                        <label>Name:</label>
+                        <span id="studentName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Department:</label>
+                        <span id="department">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Institute:</label>
+                        <span id="institute">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Status:</label>
+                        <span id="status">-</span>
+                    </div>
+                </div>
+
+                <!-- Reset Button -->
+                <button class="reset-btn" onclick="resetForm()">Verify Another</button>
+            </div>
+
+            <!-- Error Message (Hidden by default) -->
+            <div class="error-section" id="errorSection">
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
